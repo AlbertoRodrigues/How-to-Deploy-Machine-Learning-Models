@@ -12,7 +12,7 @@ st.write(tamanho)
 ano = st.text_input('Informe o ano da casa: ', max_chars=4)
 st.write(ano)
 
-garagem = st.slider('Informe a quantidade de garagens da casa: ',min_value = 0, max_value = 5)
+garagem = st.slider('Informe a quantidade de garagens da casa: ', min_value = 0, max_value = 5)
 st.write(garagem)
 
 # Seleção dentre uma lista de opções pré-definida
@@ -21,11 +21,11 @@ opcao = st.selectbox('Escolha o modelo de Machine Learning a ser utilizado:', op
 st.write(opcao)
 
 if opcao == 'Regressão Linear':
-    modelo = pickle.load(open('modelo_rl.pkl','rb'))
+    modelo = pickle.load(open('modelos/modelo_rl.pkl','rb'))
 if opcao == 'Regressão Ridge':
-    modelo = pickle.load(open('modelo_ridge.pkl','rb'))
+    modelo = pickle.load(open('modelos/modelo_ridge.pkl','rb'))
 if opcao == 'Regressão Lasso':
-    modelo = pickle.load(open('modelo_lasso.pkl','rb'))
+    modelo = pickle.load(open('modelos/modelo_lasso.pkl','rb'))
 
 botao = st.button('Fazer previsão')
 if(botao):
